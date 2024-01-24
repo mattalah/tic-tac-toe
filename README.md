@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Tic Tac Toe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based Tic Tac Toe game built with Vite, React and TypeScript.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Tic Tac Toe](#tic-tac-toe)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Technologies](#technologies)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Usage](#usage)
 
-## Expanding the ESLint configuration
+## Introduction
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Tic Tac Toe is a classic game where two players take turns marking spaces in a 3x3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
-- Configure the top-level `parserOptions` property like this:
+This implementation is built using React, Vite for fast development, and TypeScript for type safety, providing a simple and interactive gaming experience.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
+## Features
+
+- Classic 3x3 grid.
+- Alternating turns between two players (X and O).
+- Winner determination for horizontal, vertical, and diagonal combinations.
+- Reset button to start a new game.
+
+## Technologies
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Vite](https://vitejs.dev/) - A fast development server and build tool for modern web development.
+- [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+
+## Getting Started
+
+To get started with the Tic Tac Toe game locally, follow the instructions below.
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mattalah/tic-tac-toe
+cd tic-tac-toe
+npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+Run the development server:
+
+```bash
+npm run dev
+```
