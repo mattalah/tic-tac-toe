@@ -6,16 +6,14 @@ interface SquareProps {
     isDisabled: boolean;
 }
 
-const Square: React.FC<SquareProps> = ({ value, onClick, isDisabled }) => {
-    return (
-        <button
-            className={isDisabled ? "disabledSquare" : "square"}
-            onClick={onClick}
-            disabled={isDisabled}
-        >
-            {value}
-        </button>
-    );
-};
+const Square: React.FC<SquareProps> = ({ value, onClick, isDisabled }) => (
+    <button
+        className={`square ${isDisabled ? "disabledSquare" : ""}`}
+        onClick={onClick}
+        disabled={isDisabled}
+    >
+        {value}
+    </button>
+);
 
 export default Square;

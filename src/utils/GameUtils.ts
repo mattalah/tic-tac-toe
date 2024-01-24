@@ -1,4 +1,4 @@
-export const calculateWinner = (squares: Array<string | null>): string => {
+const calculateWinner = (squares: Array<string | null>): string => {
     const lines = [
         [0, 1, 2],
         [3, 4, 5],
@@ -18,3 +18,5 @@ export const calculateWinner = (squares: Array<string | null>): string => {
 
     return "None";
 };
+
+export { calculateWinner };

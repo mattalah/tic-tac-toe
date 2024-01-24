@@ -34,20 +34,18 @@ const Board: React.FC = () => {
             <div className="status">Next player: <span>{player === "X" ? "O" : "X"}</span></div>
             <div className="winner">Winner: <span>{winner !== "None" && winner}</span></div>
             <button className="buttonStyle" onClick={onReset}>Reset</button>
-            <div className="board-row">
-                {Array.from({ length: 3 }, (_, row) => (
-                    <div key={row} className="boardRow">
-                        {Array.from({ length: 3 }, (_, col) => (
-                            <Square
-                                key={col}
-                                value={board[row * 3 + col]}
-                                onClick={() => onClick(row * 3 + col)}
-                                isDisabled={winner !== "None"}
-                            />
-                        ))}
-                    </div>
-                ))}
-            </div>
+            {Array.from({ length: 3 }, (_, row) => (
+                <div key={row} className="boardRow">
+                    {Array.from({ length: 3 }, (_, col) => (
+                        <Square
+                            key={col}
+                            value={board[row * 3 + col]}
+                            onClick={() => onClick(row * 3 + col)}
+                            isDisabled={winner !== "None"}
+                        />
+                    ))}
+                </div>
+            ))}
         </div>
     );
 };
